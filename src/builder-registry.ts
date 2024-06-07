@@ -5,8 +5,9 @@ import Card from "./components/Card/Card";
 import VideoCard from "./components/VideoCard/VideoCard";
 import Footer from "./components/Footer/Footer";
 import Images from "./components/Images/Images";
-// import Navigation from "./components/Navigation/Navigation";
-
+import TextArea from "./components/TextArea/TextArea";
+// import Forms from "./components/Forms/Forms";
+// import Header from "./components/Header/Header";
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 
 Builder.registerComponent(Counter, {
@@ -59,10 +60,21 @@ Builder.registerComponent(Images, {
   ],
 });
 
-// Builder.registerComponent(Navigation, {
-//   name: "Navigation",
+Builder.registerComponent(TextArea, {
+  name: "TextArea",
+  inputs: [{ name: "Text", type: "text" }],
+});
+// Builder.registerComponent(Header, {
+//   name: "TextArea",
+//   inputs: [{ name: "Text", type: "text" }],
+// });
+
+// Builder.registerComponent(Forms, {
+//   name: "Forms",
 //   inputs: [
-//     { name: "imageUrl", type: "text" },
-//     { name: "redirectUrl", type: "text" },
+//     { name: "name", type: "text" },
+//     { name: "email", type: "text" },
+//     { name: "mob", type: "text" },
+//     { name: "add", type: "text" },
 //   ],
 // });
