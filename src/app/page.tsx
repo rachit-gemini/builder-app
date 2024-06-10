@@ -29,7 +29,7 @@ import Head from "next/head";
 export default function Home() {
   return (
     <>
-    {/* <Head>
+    <Head>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-3GXQC16HQX"
@@ -42,7 +42,7 @@ export default function Home() {
       gtag('config', 'G-3GXQC16HQX');
     </script>
 
-    </Head> */}
+    </Head>
     <main className={styles.main}>
        <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-3GXQC16HQX"
