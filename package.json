@@ -2,7 +2,7 @@
   "name": "builder-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://<rachit-gemini>.github.io/<uilder-app>",
+  "homepage": "https://<rachit-gemini>.github.io/<builder-app>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
