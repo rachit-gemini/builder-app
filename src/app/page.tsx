@@ -1,9 +1,62 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Script from 'next/script';
+import Head from "next/head";
+// import ReactGA from 'react-ga';
+
+// export const initGA = () => {
+//   ReactGA.initialize('G-3GXQC16HQX');
+// };
+
+// export const logPageView = () => {
+//   ReactGA.set({ page: window.location.pathname });
+//   ReactGA.pageview(window.location.pathname);
+// };
+
+// export const logEvent = (category = '', action = '') => {
+//   if (category && action) {
+//     ReactGA.event({ category, action });
+//   }
+// };
+
+// export const logException = (description = '', fatal = false) => {
+//   if (description) {
+//     ReactGA.exception({ description, fatal });
+//   }
+// };
+
 
 export default function Home() {
   return (
+    <>
+    <Head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3GXQC16HQX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      {/* function gtag(){window.dataLayer.push(arguments)} */}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3GXQC16HQX');
+    </script>
+
+    </Head>
     <main className={styles.main}>
+       <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-3GXQC16HQX"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-3GXQC16HQX');
+        `}
+      </Script>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -91,5 +144,6 @@ export default function Home() {
         </a>
       </div>
     </main>
+    </>
   );
 }
