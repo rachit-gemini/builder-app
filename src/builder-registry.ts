@@ -57,6 +57,7 @@ Builder.registerComponent(Images, {
   inputs: [
     { name: "imageUrl", type: "text" },
     { name: "redirectUrl", type: "text" },
+    { name: "altText", type: "text" },
   ],
 });
 
